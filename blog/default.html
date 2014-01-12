@@ -1,0 +1,21 @@
+{% capture body %}
+  <article class="post">
+    {% if meta.lead_image.value != blank %}
+      <figure class="post-lead-image image">
+        <img src="{{ meta.lead_image }}">
+      </figure>
+    {% endif %}
+
+    <h1 class="post-title">{{title}}</h1>
+    {{body}}
+
+    {% if meta.lead_caption.value != blank %}
+      <figcaption class="post-lead-caption">
+        Image source: <br>
+        <i>{{ meta.lead_caption }}</i>
+      </figcaption>
+    {% endif %}
+  </article>
+{% endcapture %}
+
+{% include 'layouts/default' %}

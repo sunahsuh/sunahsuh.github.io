@@ -1,0 +1,25 @@
+{% capture body %}
+  {% for post in posts %}
+    <article class="post">
+      {% if post.meta.lead_image != blank %}
+      <figure class="post-lead-image image">
+        <a href="{{ post.url }}">
+          <img src="{{ post.meta.lead_image }}">
+        </a>
+      </figure>
+      {% endif %}
+
+      <h1 class="post-title">
+        <a href="{{ post.url }}">{{ post.title }}</a>
+      </h1>
+
+      {{ post.body }}
+    </article>
+
+    {% if post != posts.last %}
+    <hr class="post-sep">
+    {% endif %}
+  {% endfor %}
+{% endcapture %}
+
+{% include 'layouts/default' %}
