@@ -1,7 +1,0 @@
----
-layout: post
-title:  "Reboot!"
-date:   2014-06-21 15:04:49
-categories: update
----
-My previously unmaintained personal site was in dire need of a reboot, so here are my first baby steps =)
